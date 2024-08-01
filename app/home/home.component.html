@@ -11,6 +11,18 @@
           }
         </div>
       } @else {
+        <div class="container">
+          <div class="container-son">
+            <span>Welcome to Task Management System</span>
+
+            <div class="container-buttons">
+              <button class="btn btn-primary" [routerLink]="['/login']">Sign in</button>
+              <button class="btn btn-primary" [routerLink]="['/account/register']">Register</button>
+            </div>
+
+          </div>
+        </div>
+        <!--
         <div class="alert alert-warning">
           <span>If you want to </span>
           <a class="alert-link" (click)="login()">sign in</a
@@ -24,8 +36,12 @@
           <span>You don&apos;t have an account yet?</span>&nbsp;
           <a class="alert-link" routerLink="/account/register">Register a new account</a>
         </div>
+        -->
       }
     </div>
+    
+    
+  
 
   </div>
 </div>
