@@ -8,6 +8,8 @@
         <div class="alert alert-success">
           @if (account()) {
             <span id="home-logged-message">You are logged in as user &quot;{{ account()!.login }}&quot;.</span>
+            {{account()?.authorities?.length}}
+            
           }
         </div>
       } @else {
@@ -38,6 +40,14 @@
         </div>
         -->
       }
+    </div>
+
+    <div class="card flex justify-content-center">
+      <p-multiSelect 
+          [options]="cities" 
+          [(ngModel)]="selectedCities" 
+          optionLabel="name" 
+          placeholder="Select Cities" />
     </div>
     
     
